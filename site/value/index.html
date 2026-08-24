@@ -1,0 +1,225 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>生态产品价值实现</title>
+<link rel="preload" as="image" href="tea.webp" fetchpriority="high">
+<style>
+:root{
+  --green:#2e7255;--green2:#79a38a;--deep:#17382c;--ink:#26352d;--muted:#6c7b72;
+  --paper:#f4f5ef;--white:#fff;--line:#dfe7df;--sand:#b58b64;--sand2:#eee3d6;
+  --blue:#678691;--shadow:0 18px 52px rgba(35,67,49,.08);
+  --sans:"HarmonyOS Sans SC","MiSans","PingFang SC","Microsoft YaHei UI","Microsoft YaHei","Segoe UI",sans-serif;
+}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:radial-gradient(circle at 12% 20%,rgba(71,116,88,.065),transparent 29%),radial-gradient(circle at 88% 76%,rgba(181,139,100,.06),transparent 31%),var(--paper);color:var(--ink);font-family:var(--sans);-webkit-font-smoothing:antialiased;overflow-x:hidden;line-height:1.75}a{text-decoration:none;color:inherit}.wrap{width:min(1190px,calc(100% - 48px));margin:0 auto}.progress{position:fixed;z-index:120;top:0;left:0;width:0;height:3px;background:linear-gradient(90deg,#2e7255,#7ea28b,#b58b64)}
+.nav{position:fixed;z-index:90;top:0;left:0;right:0;height:72px;color:#fff;transition:.35s}.nav.scrolled{background:rgba(249,250,246,.93);backdrop-filter:blur(18px) saturate(1.12);color:#36453c;box-shadow:0 10px 34px rgba(31,62,45,.08)}.nav-inner{height:72px;display:flex;align-items:center;gap:30px}.brand{font-weight:760;letter-spacing:.035em;white-space:nowrap}.brand-mark{width:31px;height:31px;border-radius:50%;display:inline-grid;place-items:center;background:rgba(255,255,255,.16);margin-right:9px;vertical-align:-8px;border:1px solid rgba(255,255,255,.25)}.nav.scrolled .brand-mark{background:#e7f0e9;border-color:#d5e3d8}.brand-mark svg{width:18px;height:18px}.nav-links{margin-left:auto;display:flex;align-items:center;gap:24px}.nav-links a{font-size:14px;opacity:.77;position:relative;transition:.25s}.nav-links a:hover,.nav-links a.active{opacity:1}.nav-links a.active{font-weight:700}.nav-links a.active:after{content:"";position:absolute;height:2px;width:22px;border-radius:9px;background:currentColor;left:50%;bottom:-13px;transform:translateX(-50%)}
+.hero{height:60vh;min-height:540px;position:relative;display:flex;align-items:center;overflow:hidden;background:#183428}.hero img{position:absolute;inset:-28px;width:calc(100% + 56px);height:calc(100% + 56px);object-fit:cover;object-position:center 46%;filter:saturate(.92) contrast(1.035);animation:heroBreath 14s ease-in-out infinite}@keyframes heroBreath{0%,100%{transform:scale(1.02)}50%{transform:scale(1.058)}}.hero-shade{position:absolute;inset:0;background:radial-gradient(circle at 50% 42%,rgba(10,36,26,.02) 0,rgba(10,36,26,.17) 46%,rgba(10,29,21,.54) 100%),linear-gradient(to top,rgba(10,28,20,.64),rgba(10,28,20,.06) 62%)}.hero-fade{position:absolute;left:0;right:0;bottom:-1px;height:105px;background:linear-gradient(to top,var(--paper),transparent)}.hero-copy{position:relative;z-index:3;color:#fff;max-width:850px;text-align:center;margin:0 auto;padding-top:54px}.hero h1{font-size:clamp(43px,5vw,64px);line-height:1.08;letter-spacing:.045em;font-weight:650;margin:0;text-shadow:0 10px 28px rgba(0,0,0,.25)}.hero-sub{margin:18px auto 0;font-size:clamp(17px,1.45vw,21px);letter-spacing:.025em;color:rgba(255,255,255,.91);font-weight:500;max-width:760px}.hero-desc{margin:14px auto 0;max-width:720px;font-size:15px;line-height:1.9;color:rgba(255,255,255,.77)}
+main{padding:72px 0 112px}.section{margin-top:88px}.section:first-child{margin-top:0}.section+.section{border-top:1px solid rgba(216,225,216,.78);padding-top:82px}.section-head{display:flex;align-items:flex-end;justify-content:space-between;gap:30px;margin-bottom:32px}.section-title{display:flex;align-items:center;gap:14px}.section-title .no{font-size:14px;line-height:1;font-weight:800;color:var(--green);background:#e7efea;border:1px solid #d5e1d9;border-radius:999px;padding:8px 10px}.section-head h2{font-size:clamp(30px,2.8vw,37px);line-height:1.2;margin:0;font-weight:680;letter-spacing:.01em}.section-note{font-size:15px;color:#76857c;max-width:480px;text-align:right}
+/* 01 path */
+.path-wrap{position:relative;padding:34px 14px 4px}.path-line{position:absolute;top:82px;left:9%;right:9%;height:2px;background:linear-gradient(90deg,#cddfd1 0%,#6d9b7b 52%,#d6c6b3 100%);overflow:hidden}.path-line:after{content:"";position:absolute;left:-35%;top:0;width:30%;height:100%;background:linear-gradient(90deg,transparent,rgba(255,255,255,.95),transparent);animation:flow 4.2s linear infinite}@keyframes flow{to{left:115%}}.path-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;position:relative;z-index:2}.step{background:rgba(255,255,255,.9);border:1px solid var(--line);border-radius:26px;min-height:270px;box-shadow:0 14px 38px rgba(35,67,49,.055);transition:.34s ease;position:relative;overflow:hidden}.step:hover{transform:translateY(-8px);box-shadow:0 24px 54px rgba(35,67,49,.12);border-color:#b7d0be}.step-body{padding:28px 24px 27px}.step-icon{width:60px;height:60px;border-radius:50%;display:grid;place-items:center;background:linear-gradient(145deg,#33785d,#265f49);color:#fff;box-shadow:0 11px 24px rgba(47,114,88,.22);margin-bottom:17px;transition:.3s}.step:nth-child(3) .step-icon{background:linear-gradient(145deg,#638890,#4f737a)}.step:nth-child(4) .step-icon{background:linear-gradient(145deg,#bb9069,#97724f)}.step:hover .step-icon{transform:scale(1.07) rotate(-4deg)}.step-icon svg{width:28px;height:28px}.step-num{font-size:12px;font-weight:800;letter-spacing:.14em;color:#89a494;margin-bottom:5px}.step h3{font-size:21px;margin:0 0 9px;line-height:1.35}.step p{font-size:14.4px;color:#6c7a72;margin:0;line-height:1.74}
+/* 02 photo value types */
+.value-types{display:grid;grid-template-columns:1.08fr .96fr .96fr;gap:20px}.type-card{position:relative;border-radius:30px;background:#fff;border:1px solid var(--line);box-shadow:var(--shadow);overflow:hidden;min-height:430px;transition:.34s}.type-card:hover{transform:translateY(-6px);box-shadow:0 24px 58px rgba(35,67,49,.13)}.type-photo{height:238px;position:relative;overflow:hidden}.type-card:first-child .type-photo{height:255px}.type-photo img{width:100%;height:100%;object-fit:cover;display:block;transition:.65s cubic-bezier(.16,1,.3,1);filter:saturate(.93) contrast(1.02)}.type-card:hover .type-photo img{transform:scale(1.055);filter:saturate(1.02)}.type-photo:after{content:"";position:absolute;inset:0;background:linear-gradient(to top,rgba(17,44,33,.36),rgba(17,44,33,0) 65%)}.type-body{padding:24px 26px 27px;position:relative}.type-tag{display:inline-flex;align-items:center;gap:7px;color:var(--green);font-size:12.5px;font-weight:760;letter-spacing:.08em;margin-bottom:8px}.type-tag:before{content:"";width:18px;height:2px;border-radius:2px;background:currentColor}.type-card:nth-child(2) .type-tag{color:#5f8089}.type-card:nth-child(3) .type-tag{color:#a47750}.type-card h3{font-size:24px;line-height:1.25;margin:0 0 10px}.type-card p{font-size:14.6px;color:#68776f;margin:0;line-height:1.82}.type-kws{display:flex;flex-wrap:wrap;gap:8px;margin-top:17px}.type-kws span{font-size:12.5px;color:#66766d;padding:6px 10px;border-radius:999px;background:#f1f5f1;border:1px solid #e4ebe4}.type-card:nth-child(2) .type-kws span{background:#f1f5f6;border-color:#e4ebed}.type-card:nth-child(3) .type-kws span{background:#f8f3ec;border-color:#eee3d6}
+/* 03 editorial mosaic */
+.resource-grid{display:grid;grid-template-columns:1.35fr .85fr .85fr;grid-template-rows:280px 280px;gap:18px}.tile{position:relative;border-radius:28px;overflow:hidden;background:#18392b;box-shadow:0 15px 42px rgba(33,64,46,.09);isolation:isolate}.tile.feature{grid-row:1/3}.tile img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .75s cubic-bezier(.16,1,.3,1),filter .45s;filter:saturate(.92) contrast(1.02)}.tile:hover img{transform:scale(1.065);filter:saturate(1.02) contrast(1.04)}.tile-shade{position:absolute;inset:0;background:linear-gradient(to top,rgba(11,32,23,.78),rgba(11,32,23,.12) 62%,rgba(11,32,23,0));z-index:1;transition:.35s}.tile:hover .tile-shade{background:linear-gradient(to top,rgba(11,32,23,.84),rgba(11,32,23,.06) 70%)}.tile-copy{position:absolute;left:0;right:0;bottom:0;z-index:2;color:#fff;padding:22px 23px;transition:.36s}.tile-copy small{display:block;font-size:11.8px;letter-spacing:.1em;color:rgba(255,255,255,.68);margin-bottom:5px}.tile h3{font-size:21px;margin:0 0 6px;letter-spacing:.01em}.tile p{font-size:13.5px;color:rgba(255,255,255,.82);margin:0;line-height:1.68;max-height:0;opacity:0;overflow:hidden;transform:translateY(8px);transition:.35s}.tile:hover p{max-height:80px;opacity:1;transform:none}.tile.feature h3{font-size:28px}.tile.feature .tile-copy{padding:29px 30px}.tile.feature p{font-size:14.4px;max-width:440px}.resource-row{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:18px}.resource-row .tile{height:238px}.public-note{margin-top:24px;text-align:center;font-size:13px;color:#859087}
+/* decorative photo rail */
+.rail{margin-top:54px;border-radius:30px;overflow:hidden;display:grid;grid-template-columns:1.15fr .85fr;height:240px;background:#17382c;box-shadow:0 18px 52px rgba(28,58,42,.12)}.rail-photo{position:relative;overflow:hidden}.rail-photo img{width:100%;height:100%;object-fit:cover;display:block;transition:.7s}.rail:hover .rail-photo img{transform:scale(1.035)}.rail-copy{color:#fff;padding:36px 42px;display:flex;flex-direction:column;justify-content:center;background:linear-gradient(135deg,#214d3a,#17382c)}.rail-copy h3{font-size:27px;margin:0 0 9px}.rail-copy p{font-size:14.5px;color:rgba(255,255,255,.74);margin:0;line-height:1.85}.rail-line{width:58px;height:3px;border-radius:3px;background:#a8c8b2;margin:0 0 18px}
+.reveal{opacity:0;transform:translateY(24px);transition:opacity .72s ease,transform .72s ease}.reveal.on{opacity:1;transform:none}.footer{border-top:1px solid #dde5dd;padding:28px 0 38px;color:#7b8981}.footer-inner{display:flex;justify-content:space-between;gap:20px;font-size:13px}
+
+/* V3: path focuses on process, no decorative photos */
+.path-wrap{padding:26px 6px 2px}
+.path-line{top:76px;left:8%;right:8%;height:3px;background:linear-gradient(90deg,#bdd6c5 0%,#6d9b7b 46%,#8ba8a7 72%,#d8c2a8 100%);border-radius:999px}
+.path-grid{gap:20px}
+.step{min-height:270px;background:linear-gradient(180deg,rgba(255,255,255,.98),rgba(249,251,248,.96));}
+.step:before{content:"";position:absolute;left:0;right:0;top:0;height:4px;background:linear-gradient(90deg,#3d7d60,#8eb09a)}
+.step:nth-child(2):before{background:linear-gradient(90deg,#5f8c72,#a7bfaa)}
+.step:nth-child(3):before{background:linear-gradient(90deg,#64868d,#93aeb3)}
+.step:nth-child(4):before{background:linear-gradient(90deg,#9a7656,#c5a27f)}
+.step:not(:last-child):after{content:"→";position:absolute;right:-17px;top:48px;z-index:5;width:34px;height:34px;border-radius:50%;display:grid;place-items:center;background:#f4f5ef;color:#6f8778;border:1px solid #d8e2da;font-size:18px;font-weight:700;box-shadow:0 6px 18px rgba(39,72,53,.06)}
+.step-icon{width:64px;height:64px;margin-bottom:20px}
+.step-num{font-size:13px;letter-spacing:.12em;margin-bottom:7px}
+.step h3{font-size:22px;margin-bottom:11px}.step p{font-size:15px;line-height:1.8}
+/* ensure image blocks have visible proportions */
+.type-photo{background:#e6ece7}.tile{background:#dfe8e1}.rail-photo{background:#dfe8e1}
+.type-photo img,.tile img,.rail-photo img,.hero img{display:block!important;opacity:1!important;visibility:visible!important}
+.type-tag{letter-spacing:.02em;font-size:13.5px}
+.type-tag:before{width:16px}
+
+@media(max-width:980px){.nav-links{display:none}.path-grid{grid-template-columns:repeat(2,1fr)}.path-line{display:none}.value-types{grid-template-columns:1fr}.type-card,.type-card:first-child{min-height:auto}.type-photo,.type-card:first-child .type-photo{height:260px}.resource-grid{grid-template-columns:1fr 1fr;grid-template-rows:320px 250px 250px}.tile.feature{grid-row:auto;grid-column:1/3}.resource-row{grid-template-columns:1fr 1fr}.resource-row .tile:last-child{grid-column:1/3}.rail{grid-template-columns:1fr;height:auto}.rail-photo{height:260px}}
+@media(max-width:660px){.wrap{width:min(100% - 28px,1190px)}.hero{min-height:500px}.hero h1{font-size:40px}.hero-desc{font-size:14px}.section{margin-top:66px}.section+.section{padding-top:66px}.section-head{display:block}.section-note{text-align:left;margin-top:10px}.path-grid{grid-template-columns:1fr}.value-types{grid-template-columns:1fr}.resource-grid{display:block}.tile,.tile.feature{height:300px;margin-bottom:15px}.resource-row{grid-template-columns:1fr}.resource-row .tile,.resource-row .tile:last-child{height:270px;grid-column:auto}.rail-copy{padding:30px 26px}.footer-inner{display:block}.footer-inner span{display:block;margin:4px 0}}
+
+/* V4：路径连接与三种价值形态精修 */
+.step:not(:last-child):after{content:none!important;display:none!important}
+.path-wrap{padding:32px 10px 6px}
+.path-line{top:78px;left:10%;right:10%;height:2px;background:linear-gradient(90deg,rgba(54,119,88,.20),rgba(54,119,88,.62) 35%,rgba(93,132,132,.56) 68%,rgba(166,125,88,.38));box-shadow:none}
+.path-line:after{height:2px}
+.step{overflow:visible;border-radius:24px}
+.step:before{border-radius:24px 24px 0 0}
+.step-body{background:linear-gradient(180deg,rgba(255,255,255,.985),rgba(248,250,247,.97));border-radius:24px;min-height:270px;position:relative;z-index:1;overflow:hidden}
+
+/* 三种价值形态：由普通三卡片改为一主两辅的编辑式版面 */
+.value-types{display:grid;grid-template-columns:1.02fr 1.42fr;grid-template-rows:255px 255px;gap:20px;align-items:stretch}
+.type-card{min-height:0;border-radius:28px;overflow:hidden;background:#fff;border:1px solid var(--line);box-shadow:0 18px 48px rgba(35,67,49,.085);transition:.36s cubic-bezier(.2,.75,.2,1);display:grid}
+.type-card:hover{transform:translateY(-5px);box-shadow:0 26px 60px rgba(35,67,49,.13)}
+.type-card:first-child{grid-column:1;grid-row:1/3;display:block;position:relative;min-height:530px;background:#183b2d}
+.type-card:first-child .type-photo{height:100%;position:absolute;inset:0}
+.type-card:first-child .type-photo:after{background:linear-gradient(to top,rgba(12,38,28,.90) 0%,rgba(12,38,28,.36) 48%,rgba(12,38,28,.08) 78%)}
+.type-card:first-child .type-body{position:absolute;z-index:2;left:0;right:0;bottom:0;padding:32px 32px 30px;color:#fff}
+.type-card:first-child .type-tag{color:#d7eadc}
+.type-card:first-child .type-card h3,.type-card:first-child h3{color:#fff;font-size:31px}
+.type-card:first-child p{color:rgba(255,255,255,.82);font-size:15px;max-width:420px}
+.type-card:first-child .type-kws span{background:rgba(255,255,255,.12);border-color:rgba(255,255,255,.19);color:rgba(255,255,255,.88);backdrop-filter:blur(8px)}
+.type-card:nth-child(2){grid-column:2;grid-row:1;grid-template-columns:44% 56%;}
+.type-card:nth-child(3){grid-column:2;grid-row:2;grid-template-columns:56% 44%;}
+.type-card:nth-child(2) .type-photo{grid-column:1;height:100%;min-height:255px}
+.type-card:nth-child(2) .type-body{grid-column:2;align-self:center;padding:27px 30px}
+.type-card:nth-child(3) .type-photo{grid-column:2;grid-row:1;height:100%;min-height:255px}
+.type-card:nth-child(3) .type-body{grid-column:1;grid-row:1;align-self:center;padding:27px 30px}
+.type-card:nth-child(n+2) h3{font-size:26px;margin-bottom:9px}
+.type-card:nth-child(n+2) p{font-size:14.7px;line-height:1.8}
+.type-photo{overflow:hidden;position:relative}
+.type-photo img{width:100%;height:100%;object-fit:cover;display:block;transition:.7s cubic-bezier(.16,1,.3,1)}
+.type-tag{font-size:13px;letter-spacing:.04em}
+.type-tag:before{width:24px}
+.type-kws{margin-top:14px}
+
+/* 页尾收束：只保留文字，不再重复使用图片 */
+.rail{margin-top:28px;min-height:220px;height:auto;display:block;position:relative;overflow:hidden;border-radius:30px;background:linear-gradient(120deg,#214c39 0%,#2f6b50 52%,#597d68 100%);border:0;box-shadow:0 20px 52px rgba(34,77,57,.13)}
+.rail:before{content:"";position:absolute;inset:0;background:radial-gradient(circle at 82% 18%,rgba(255,255,255,.11),transparent 24%),repeating-radial-gradient(circle at 100% 100%,transparent 0 26px,rgba(255,255,255,.035) 27px 28px);pointer-events:none}
+.rail-photo{display:none!important}
+.rail-copy{position:relative;z-index:1;min-height:220px;padding:42px 52px 40px;display:flex;flex-direction:column;justify-content:center;max-width:850px}
+.rail-line{width:54px;height:3px;background:#d6b38e;border-radius:10px;margin-bottom:18px}
+.rail-copy h3{color:#fff;font-size:clamp(28px,3vw,40px);line-height:1.25;margin:0 0 14px;letter-spacing:.01em}
+.rail-copy p{color:rgba(255,255,255,.78);font-size:15.5px;line-height:1.9;margin:0;max-width:770px}
+.public-note{margin-top:18px}
+
+@media(max-width:980px){
+  .value-types{grid-template-columns:1fr;grid-template-rows:auto;gap:18px}
+  .type-card:first-child,.type-card:nth-child(2),.type-card:nth-child(3){grid-column:auto;grid-row:auto;display:block;min-height:auto}
+  .type-card:first-child{height:440px}
+  .type-card:nth-child(2) .type-photo,.type-card:nth-child(3) .type-photo{height:250px;min-height:0}
+  .type-card:nth-child(2) .type-body,.type-card:nth-child(3) .type-body{padding:25px 26px}
+  .rail-copy{padding:36px 30px;min-height:200px}
+}
+
+
+/* V5 最终精修：路径不再使用断续连接线；图片完整保留 */
+.path-wrap{padding:8px 0 4px!important}
+.path-line{display:none!important}
+.path-grid{gap:20px!important}
+.step{min-height:258px!important;border-radius:25px!important;background:rgba(255,255,255,.94)!important;border:1px solid rgba(211,224,214,.92)!important;box-shadow:0 14px 38px rgba(35,67,49,.06)!important;overflow:hidden!important}
+.step:hover{transform:translateY(-6px)!important;box-shadow:0 24px 50px rgba(35,67,49,.11)!important}
+.step-body{padding:28px 25px 27px!important}
+.step-num{display:inline-flex!important;align-items:center!important;width:auto!important;padding:5px 9px!important;border-radius:999px!important;background:#eef4ef!important;color:#65806f!important;font-size:11px!important;letter-spacing:.10em!important;margin:0 0 12px!important}
+.step:nth-child(2) .step-num{background:#edf3f1!important;color:#628077!important}
+.step:nth-child(3) .step-num{background:#edf2f3!important;color:#617b80!important}
+.step:nth-child(4) .step-num{background:#f5efe8!important;color:#987557!important}
+.step-icon{margin-bottom:17px!important}
+
+/* 三种形态：统一成一组连续的“生态画卷”，不再做奇怪的左右拼接 */
+.value-types{display:grid!important;grid-template-columns:repeat(3,minmax(0,1fr))!important;grid-template-rows:1fr!important;gap:14px!important;padding:14px!important;border-radius:34px!important;background:linear-gradient(145deg,#edf3ee,#f7f5f0)!important;border:1px solid #dfe8df!important;box-shadow:0 18px 54px rgba(35,67,49,.07)!important}
+.type-card,.type-card:first-child,.type-card:nth-child(2),.type-card:nth-child(3){display:block!important;position:relative!important;grid-column:auto!important;grid-row:auto!important;height:470px!important;min-height:470px!important;border-radius:24px!important;border:0!important;overflow:hidden!important;background:#264c3b!important;box-shadow:none!important;transform:none!important}
+.type-card:hover{transform:translateY(-4px)!important;box-shadow:0 18px 34px rgba(28,60,43,.15)!important}
+.type-photo,.type-card:first-child .type-photo,.type-card:nth-child(2) .type-photo,.type-card:nth-child(3) .type-photo{position:absolute!important;inset:0!important;width:100%!important;height:100%!important;min-height:0!important;grid-column:auto!important;grid-row:auto!important;background:#dfe9e1!important}
+.type-photo:after{content:""!important;position:absolute!important;inset:0!important;background:linear-gradient(to top,rgba(12,34,24,.90) 0%,rgba(12,34,24,.58) 34%,rgba(12,34,24,.10) 69%,rgba(12,34,24,.02) 100%)!important}
+.type-photo img{width:100%!important;height:100%!important;object-fit:cover!important;display:block!important;opacity:1!important;visibility:visible!important;filter:saturate(.96) contrast(1.02)!important;transition:transform .7s cubic-bezier(.16,1,.3,1),filter .4s!important}
+.type-card:hover .type-photo img{transform:scale(1.05)!important;filter:saturate(1.04) contrast(1.03)!important}
+.type-body,.type-card:nth-child(2) .type-body,.type-card:nth-child(3) .type-body{position:absolute!important;z-index:3!important;left:0!important;right:0!important;bottom:0!important;padding:26px 26px 28px!important;color:#fff!important;grid-column:auto!important;grid-row:auto!important;align-self:auto!important}
+.type-tag,.type-card:nth-child(2) .type-tag,.type-card:nth-child(3) .type-tag{display:inline-flex!important;align-items:center!important;gap:8px!important;color:rgba(255,255,255,.82)!important;font-size:13px!important;font-weight:720!important;letter-spacing:.04em!important;margin-bottom:9px!important}
+.type-tag:before{content:""!important;width:22px!important;height:2px!important;background:#d2b38f!important;border-radius:4px!important}
+.type-card:nth-child(2) .type-tag:before{background:#b8d1cf!important}
+.type-card:nth-child(3) .type-tag:before{background:#e0c59f!important}
+.type-card h3,.type-card:nth-child(n+2) h3{font-size:28px!important;color:#fff!important;margin:0 0 10px!important;line-height:1.2!important}
+.type-card p,.type-card:nth-child(n+2) p{font-size:14.6px!important;line-height:1.78!important;color:rgba(255,255,255,.84)!important;margin:0!important}
+.type-kws{display:flex!important;flex-wrap:wrap!important;gap:7px!important;margin-top:15px!important}
+.type-kws span,.type-card:first-child .type-kws span,.type-card:nth-child(2) .type-kws span,.type-card:nth-child(3) .type-kws span{font-size:12px!important;color:rgba(255,255,255,.90)!important;padding:5px 9px!important;border-radius:999px!important;background:rgba(255,255,255,.11)!important;border:1px solid rgba(255,255,255,.18)!important;backdrop-filter:blur(6px)!important}
+
+/* 下方所有实景图片继续保留并保证可见 */
+.tile img,.hero img{display:block!important;opacity:1!important;visibility:visible!important}
+
+/* 页尾按已确认方案继续不重复配图 */
+.rail-photo{display:none!important}
+
+@media(max-width:980px){
+  .value-types{grid-template-columns:1fr!important;padding:12px!important}
+  .type-card,.type-card:first-child,.type-card:nth-child(2),.type-card:nth-child(3){height:390px!important;min-height:390px!important}
+}
+@media(max-width:660px){
+  .path-grid{grid-template-columns:1fr!important}
+  .type-card,.type-card:first-child,.type-card:nth-child(2),.type-card:nth-child(3){height:360px!important;min-height:360px!important}
+  .type-body,.type-card:nth-child(2) .type-body,.type-card:nth-child(3) .type-body{padding:22px!important}
+  .type-card h3,.type-card:nth-child(n+2) h3{font-size:25px!important}
+}
+
+</style>
+<link rel="stylesheet" href="../navigation.css?v=20260823-9">
+</head>
+<body class="site-inner-hero" data-site-page="value" style="--site-hero-image:url('/site/value/tea.webp')">
+<div class="progress" id="progress"></div>
+<header class="nav" id="nav"><div class="wrap nav-inner"><a class="brand" href="../index.html"><span class="brand-mark"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 22V8m0 0C8.5 8 6 6 5 3c3.6-.2 6.1 1.1 7 5zm0 4c3.5 0 6-2 7-5-3.6-.2-6.1 1.1-7 5z"/></svg></span>石漠化治理公益科普</a><nav class="nav-links"><a href="../index.html">首页</a><a href="../science/index.html">公益科普</a><a href="../cases/index.html">典型案例</a><a href="../dashboard/index.html">数据监测</a><a class="active" href="../value/index.html">价值实现</a><a href="../stories/index.html">生态故事</a><a href="../community/index.html">公众参与</a><a href="../about/index.html">关于本站</a></nav></div></header>
+<section class="hero">
+  <img id="heroImage" src="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" alt="石漠化治理后的绿色山地">
+  <div class="hero-shade"></div><div class="hero-fade"></div>
+  <div class="wrap hero-copy">
+    <h1>生态产品价值实现</h1>
+    <p class="hero-sub">治理恢复生态，也让山地资源重新产生生产、生活与公共价值</p>
+    <p class="hero-desc">从植被恢复、水土保持，到生态农业、林下经济与生态游憩，石漠化治理的价值可以沿着多种路径持续延伸。</p>
+  </div>
+</section>
+<main><div class="wrap">
+  <section class="section reveal">
+    <div class="section-head"><div class="section-title"><span class="no">01</span><h2>石漠化治理的价值转化路径</h2></div></div>
+    <div class="path-wrap"><div class="path-grid">
+      <article class="step"><div class="step-body"><div class="step-icon"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"/></svg></div><div class="step-num">STEP 01</div><h3>石漠化修复</h3><p>封山育林、退耕还林与工程治理协同推进，让裸岩山地逐步恢复植被。</p></div></article>
+      <article class="step"><div class="step-body"><div class="step-icon"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 15a4 4 0 004 4h9a5 5 0 10-.1-9.999 5.002 5.002 0 10-9.78 2.096A4.001 4.001 0 003 15z"/></svg></div><div class="step-num">STEP 02</div><h3>生态资源保育</h3><p>植被恢复后，水土保持、水源涵养和生境质量同步改善，生态系统更加稳定。</p></div></article>
+      <article class="step"><div class="step-body"><div class="step-icon"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg></div><div class="step-num">STEP 03</div><h3>生态价值转化</h3><p>生态农业、林下经济、生态旅游与森林碳汇等方式，让生态资源形成新的价值载体。</p></div></article>
+      <article class="step"><div class="step-body"><div class="step-icon"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 10h4.764a2 2 0 011.789 2.894l-3.5 7A2 2 0 0115.263 21h-4.017c-.163 0-.326-.02-.485-.06L7 20m7-10V5a2 2 0 00-2-2h-.095c-.5 0-.905.405-.905.905 0 .714-.211 1.412-.608 2.006L7 11v9m7-10h-2M7 20H5a2 2 0 01-2-2v-6a2 2 0 012-2h2.5"/></svg></div><div class="step-num">STEP 04</div><h3>富民惠民</h3><p>生态产业与公共生态服务共同改善生产生活条件，为乡村持续发展提供支撑。</p></div></article>
+    </div></div>
+  </section>
+
+  <section class="section reveal">
+    <div class="section-head"><div class="section-title"><span class="no">02</span><h2>生态价值的三种形态</h2></div></div>
+    <div class="value-types">
+      <article class="type-card">
+        <div class="type-photo"><img src="tea.webp" alt="高山茶园"></div>
+        <div class="type-body"><div class="type-tag">物质供给</div><h3>绿色物产</h3><p>茶叶、经济林果、特色农产品与林下产品，把恢复后的生态资源转化为可持续经营的绿色物产。</p><div class="type-kws"><span>生态农业</span><span>经济林果</span><span>林下产品</span></div></div>
+      </article>
+      <article class="type-card">
+        <div class="type-photo"><img src="carbon.webp" alt="恢复后的森林生态系统"></div>
+        <div class="type-body"><div class="type-tag">调节服务</div><h3>生态功能</h3><p>植被恢复持续改善水土保持、水源涵养、固碳增汇与生境质量。</p><div class="type-kws"><span>水土保持</span><span>水源涵养</span><span>固碳增汇</span></div></div>
+      </article>
+      <article class="type-card">
+        <div class="type-photo"><img src="tourism.webp" alt="绿色山地景观"></div>
+        <div class="type-body"><div class="type-tag">文化服务</div><h3>山地体验</h3><p>绿色山地、乡村景观与地域文化相互融合，为游憩、研学和生态体验拓展空间。</p><div class="type-kws"><span>生态游憩</span><span>研学体验</span><span>乡村景观</span></div></div>
+      </article>
+    </div>
+  </section>
+
+  <section class="section reveal">
+    <div class="section-head"><div class="section-title"><span class="no">03</span><h2>绿色资源的多元价值</h2></div></div>
+    <div class="resource-grid">
+      <article class="tile feature"><img src="tea.webp" alt="高山云雾茶"><div class="tile-shade"></div><div class="tile-copy"><small>生态农业</small><h3>高山云雾茶</h3><p>治理改善水土条件后，山地生态农业拥有更稳定的生长基础，茶园也成为绿色产业的重要形态。</p></div></article>
+      <article class="tile"><img src="walnut.webp" alt="石漠核桃"><div class="tile-shade"></div><div class="tile-copy"><small>经济林</small><h3>石漠核桃</h3><p>经济林兼具水土保持与物产价值，可与长期生态修复同步经营。</p></div></article>
+      <article class="tile"><img src="dragonfruit.webp" alt="红心火龙果"><div class="tile-shade"></div><div class="tile-copy"><small>特色农业</small><h3>红心火龙果</h3><p>耐旱、适应性较强，可与石漠化地区特色农业结合。</p></div></article>
+      <article class="tile"><img src="underforest.webp" alt="林下植物"><div class="tile-shade"></div><div class="tile-copy"><small>林下经济</small><h3>林下中药材</h3><p>利用林下空间发展中药材，提高林地空间的复合利用效率。</p></div></article>
+      <article class="tile"><img src="tourism.webp" alt="生态康养旅游"><div class="tile-shade"></div><div class="tile-copy"><small>文化服务</small><h3>生态康养</h3><p>修复后的山地、森林与乡村景观，为游憩和康养创造更好的生态环境。</p></div></article>
+    </div>
+    <div class="resource-row">
+      <article class="tile"><img src="carbon.webp" alt="森林碳汇"><div class="tile-shade"></div><div class="tile-copy"><small>生态权益</small><h3>森林碳汇</h3><p>森林恢复提升固碳能力，为生态权益价值实现提供基础。</p></div></article>
+      <article class="tile"><img src="farmer.webp" alt="农户采收果实"><div class="tile-shade"></div><div class="tile-copy"><small>乡村增收</small><h3>绿色产业</h3><p>让生态修复成果进入生产经营环节，形成更稳定的乡村发展支撑。</p></div></article>
+      <article class="tile"><img src="herbs.webp" alt="林下中药材"><div class="tile-shade"></div><div class="tile-copy"><small>复合经营</small><h3>林下经济</h3><p>在保护林地生态功能的前提下，拓展林地的生产和经营空间。</p></div></article>
+    </div>
+    <div class="rail">
+      <div class="rail-copy"><div class="rail-line"></div><h3>把绿色留在山上，也把收益留在乡村</h3><p>生态修复形成的森林、农林产品与景观资源，可以通过生态农业、林下经营、游憩服务等方式持续发挥价值。</p></div>
+    </div>
+    <div class="public-note">本站用于公益科普展示，不提供商品交易或售卖功能。</div>
+  </section>
+</div></main>
+<footer class="footer"><div class="wrap footer-inner"><span>石漠化治理公益科普</span><span>生态修复 · 价值实现 · 乡村发展</span></div></footer>
+<script>
+const nav=document.getElementById('nav'),progress=document.getElementById('progress'),hero=document.getElementById('heroImage');
+function onScroll(){const y=scrollY;nav.classList.toggle('scrolled',y>26);const max=document.documentElement.scrollHeight-innerHeight;progress.style.width=(max>0?Math.min(100,y/max*100):0)+'%';if(hero)hero.style.transform=`scale(${1.02+Math.min(y,500)*.000035}) translateY(${Math.min(y,420)*.018}px)`}addEventListener('scroll',onScroll,{passive:true});onScroll();
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('on');io.unobserve(e.target)}}),{threshold:.1});document.querySelectorAll('.reveal').forEach(x=>io.observe(x));
+</script>
+<script src="../navigation.js?v=20260823-9"></script></body>
+</html>
