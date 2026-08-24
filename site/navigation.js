@@ -57,6 +57,53 @@
     brand.prepend(mark);
   }
 
+  const navLinks = nav?.querySelector(".nav-links");
+  if (nav && navLinks) {
+    if (!navLinks.id) navLinks.id = "siteNavLinks";
+    let menuToggle = nav.querySelector(".site-menu-toggle,.menu-btn,.menu");
+    if (!menuToggle) {
+      menuToggle = document.createElement("button");
+      nav.querySelector(".nav-inner")?.appendChild(menuToggle);
+    }
+    menuToggle.classList.add("site-menu-toggle");
+    menuToggle.type = "button";
+    menuToggle.setAttribute("aria-label", "打开导航");
+    menuToggle.setAttribute("aria-controls", navLinks.id);
+    menuToggle.setAttribute("aria-expanded", "false");
+    menuToggle.textContent = "☰";
+
+    const closeMobileNav = () => {
+      navLinks.classList.remove("open");
+      menuToggle.setAttribute("aria-expanded", "false");
+      menuToggle.setAttribute("aria-label", "打开导航");
+      menuToggle.textContent = "☰";
+    };
+    const toggleMobileNav = () => {
+      const isOpen = navLinks.classList.toggle("open");
+      menuToggle.setAttribute("aria-expanded", String(isOpen));
+      menuToggle.setAttribute("aria-label", isOpen ? "关闭导航" : "打开导航");
+      menuToggle.textContent = isOpen ? "×" : "☰";
+    };
+
+    menuToggle.addEventListener("click", (event) => {
+      event.preventDefault();
+      event.stopImmediatePropagation();
+      toggleMobileNav();
+    }, { capture: true });
+    navLinks.addEventListener("click", (event) => {
+      if (event.target.closest("a")) closeMobileNav();
+    });
+    document.addEventListener("click", (event) => {
+      if (!nav.contains(event.target)) closeMobileNav();
+    });
+    document.addEventListener("keydown", (event) => {
+      if (event.key === "Escape") closeMobileNav();
+    });
+    window.addEventListener("resize", () => {
+      if (window.innerWidth > 1000) closeMobileNav();
+    }, { passive: true });
+  }
+
   const footer = document.querySelector("footer");
   if (footer && pageId) {
     footer.className = "site-footer";
@@ -98,6 +145,9 @@
   const restoreHero = () => {
     const hero = document.querySelector(".hero");
     if (!hero) return;
+    const primaryHeroImage = hero.querySelector("img");
+    const primaryHeroSrc = primaryHeroImage?.getAttribute("src");
+    if (primaryHeroSrc) document.body.style.setProperty("--site-hero-image", `url("${primaryHeroSrc}")`);
     hero.querySelectorAll("img").forEach((img) => {
       img.style.visibility = "visible";
       img.style.opacity = "0.999";

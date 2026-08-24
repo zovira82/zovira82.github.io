@@ -152,7 +152,7 @@ main{padding:72px 0 112px}.section{margin-top:88px}.section:first-child{margin-t
 }
 
 </style>
-<link rel="stylesheet" href="../navigation.css?v=20260824-24">
+<link rel="stylesheet" href="../navigation.css?v=20260824-25">
 </head>
 <body class="site-inner-hero" data-site-page="value" style="--site-hero-image:url('value/tea.webp')">
 <div class="progress" id="progress"></div>
@@ -220,5 +220,5 @@ const nav=document.getElementById('nav'),progress=document.getElementById('progr
 function onScroll(){const y=scrollY;nav.classList.toggle('scrolled',y>26);const max=document.documentElement.scrollHeight-innerHeight;progress.style.width=(max>0?Math.min(100,y/max*100):0)+'%';if(hero)hero.style.transform=`scale(${1.02+Math.min(y,500)*.000035}) translateY(${Math.min(y,420)*.018}px)`}addEventListener('scroll',onScroll,{passive:true});onScroll();
 const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('on');io.unobserve(e.target)}}),{threshold:.1});document.querySelectorAll('.reveal').forEach(x=>io.observe(x));
 </script>
-<script src="../navigation.js?v=20260824-24"></script></body>
+<script src="../navigation.js?v=20260824-25"></script></body>
 </html>
