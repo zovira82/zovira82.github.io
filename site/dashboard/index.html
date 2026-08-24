@@ -16,8 +16,8 @@ main{padding:76px 0 108px}.section{margin-top:84px;padding-top:4px}.section:firs
 .footer{padding:28px 0 36px;border-top:1px solid rgba(219,230,222,.8);color:#7c8b82}.footer-inner{display:flex;justify-content:space-between;gap:20px;font-size:13px}
 @media(max-width:1050px){.span7,.span5,.span6{grid-column:span 12}.map-card #scatter{height:590px}.metrics{grid-template-columns:1fr 1fr}.metric:nth-child(3){border-left:0;border-top:1px solid var(--line)}.metric:nth-child(4){border-top:1px solid var(--line)}.survey-grid{grid-template-columns:repeat(3,1fr)}.survey-item:nth-child(4),.survey-item:nth-child(5){border-top:1px solid var(--line)}}
 @media(max-width:720px){.wrap{width:min(100% - 30px,1180px)}.nav-links{display:none}.section-head{align-items:flex-start}.section-number{display:none}.metrics{grid-template-columns:1fr}.metric+.metric{border-left:0;border-top:1px solid var(--line)}.survey-grid{grid-template-columns:1fr 1fr}.survey-item{border-top:1px solid var(--line)}.chart{height:350px}.chart.tall{height:500px}.map-card #scatter{height:590px}.hero{min-height:470px}}
-</style><link rel="stylesheet" href="../navigation.css?v=20260823-10">
-</head><body class="site-inner-hero" data-site-page="dashboard" style="--site-hero-image:url('../science/forest.jpg')">
+</style><link rel="stylesheet" href="../navigation.css?v=20260824-24">
+</head><body class="site-inner-hero" data-site-page="dashboard" style="--site-hero-image:url('science/forest.jpg')">
 <div class="progress" id="progress"></div>
 <header class="nav" id="nav"><div class="wrap nav-inner"><a class="brand" href="../index.html">石漠化治理公益科普</a><nav class="nav-links"><a href="../index.html">首页</a><a href="../science/index.html">公益科普</a><a href="../cases/index.html">典型案例</a><a class="active" href="../dashboard/index.html">数据监测</a><a href="../value/index.html">价值实现</a><a href="../stories/index.html">生态故事</a><a href="../community/index.html">公众参与</a><a href="../about/index.html">关于本站</a></nav></div></header>
 <section class="hero"><img id="heroImage" src="../science/forest.jpg" alt="生态修复景观"><div class="hero-shade"></div><div class="hero-fade"></div><div class="wrap hero-copy"><h1>动态生态数据监测</h1><div class="hero-sub">从长期变化到区域差异，读懂石漠化治理的真实进展</div></div></section>
@@ -51,4 +51,4 @@ mk('severity').setOption({animationDuration:1000,title:{text:'2016—2021 不同
 
 addEventListener('resize',()=>charts.forEach(c=>c.resize()))}
 addEventListener('DOMContentLoaded',()=>{initCharts();const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('on');io.unobserve(e.target)}}),{threshold:.1});document.querySelectorAll('.reveal').forEach(x=>io.observe(x))});
-</script><script src="../navigation.js?v=20260823-10"></script></body></html>
+</script><script src="../navigation.js?v=20260824-24"></script></body></html>

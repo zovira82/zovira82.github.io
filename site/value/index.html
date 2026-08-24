@@ -152,9 +152,9 @@ main{padding:72px 0 112px}.section{margin-top:88px}.section:first-child{margin-t
 }
 
 </style>
-<link rel="stylesheet" href="../navigation.css?v=20260823-10">
+<link rel="stylesheet" href="../navigation.css?v=20260824-24">
 </head>
-<body class="site-inner-hero" data-site-page="value" style="--site-hero-image:url('tea.webp')">
+<body class="site-inner-hero" data-site-page="value" style="--site-hero-image:url('value/tea.webp')">
 <div class="progress" id="progress"></div>
 <header class="nav" id="nav"><div class="wrap nav-inner"><a class="brand" href="../index.html"><span class="brand-mark"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 22V8m0 0C8.5 8 6 6 5 3c3.6-.2 6.1 1.1 7 5zm0 4c3.5 0 6-2 7-5-3.6-.2-6.1 1.1-7 5z"/></svg></span>石漠化治理公益科普</a><nav class="nav-links"><a href="../index.html">首页</a><a href="../science/index.html">公益科普</a><a href="../cases/index.html">典型案例</a><a href="../dashboard/index.html">数据监测</a><a class="active" href="../value/index.html">价值实现</a><a href="../stories/index.html">生态故事</a><a href="../community/index.html">公众参与</a><a href="../about/index.html">关于本站</a></nav></div></header>
 <section class="hero">
@@ -220,5 +220,5 @@ const nav=document.getElementById('nav'),progress=document.getElementById('progr
 function onScroll(){const y=scrollY;nav.classList.toggle('scrolled',y>26);const max=document.documentElement.scrollHeight-innerHeight;progress.style.width=(max>0?Math.min(100,y/max*100):0)+'%';if(hero)hero.style.transform=`scale(${1.02+Math.min(y,500)*.000035}) translateY(${Math.min(y,420)*.018}px)`}addEventListener('scroll',onScroll,{passive:true});onScroll();
 const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('on');io.unobserve(e.target)}}),{threshold:.1});document.querySelectorAll('.reveal').forEach(x=>io.observe(x));
 </script>
-<script src="../navigation.js?v=20260823-10"></script></body>
+<script src="../navigation.js?v=20260824-24"></script></body>
 </html>
