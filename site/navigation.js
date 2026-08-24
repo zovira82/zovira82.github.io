@@ -100,7 +100,7 @@
       if (event.key === "Escape") closeMobileNav();
     });
     window.addEventListener("resize", () => {
-      if (window.innerWidth > 1000) closeMobileNav();
+      if (window.innerWidth > 1120) closeMobileNav();
     }, { passive: true });
   }
 
