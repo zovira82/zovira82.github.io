@@ -35,11 +35,11 @@
   .fact-band{grid-template-columns:1fr}.fact-lead{grid-column:auto;flex-direction:column;gap:4px}.fact{border-left:0;border-top:1px solid var(--line)}.fact:nth-child(2){border-top:0}.source-line{text-align:left;margin-top:9px}
 }
 </style>
-<link rel="stylesheet" href="../navigation.css?v=20260823-9">
+<link rel="stylesheet" href="../navigation.css?v=20260823-10">
 </head>
-<body class="site-inner-hero" data-site-page="science" style="--site-hero-image:url('/site/science/rocky.jpg')">
+<body class="site-inner-hero" data-site-page="science" style="--site-hero-image:url('rocky.jpg')">
 <nav id="nav" class="nav"><div class="wrap nav-inner"><a class="brand" href="../index.html"><span class="brand-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M12 21c5-3.1 8-7.3 8-12.2C15.8 8.7 12.9 6.6 12 3c-.9 3.6-3.8 5.7-8 5.8C4 13.7 7 17.9 12 21Z"/><path d="M12 20V9"/></svg></span>石漠化治理公益科普</a><div class="nav-links"><a href="../index.html">首页</a><a  class="active"href="../science/index.html">公益科普</a><a href="../cases/index.html">典型案例</a><a href="../dashboard/index.html">数据监测</a><a href="../value/index.html">价值实现</a><a href="../stories/index.html">生态故事</a><a href="../community/index.html">公众参与</a><a href="../about/index.html">关于本站</a></div></div><div id="progress" class="progress"></div></nav>
-<header class="hero"><div class="hero-media"><img id="heroImage" src="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" alt="石漠化喀斯特地貌"></div><div class="hero-shade"></div><div class="wrap hero-copy"><h1>认识石漠化</h1><div class="hero-sub">喀斯特山地的土地退化与生态修复</div><p class="hero-desc">了解它如何形成、怎样分级、分布在哪里，以及今天正在采用哪些方式恢复受损的山地生态。</p></div><div class="scroll-cue"></div><div class="hero-fade"></div></header>
+<header class="hero"><div class="hero-media"><img id="heroImage" src="rocky.jpg" alt="石漠化喀斯特地貌"></div><div class="hero-shade"></div><div class="wrap hero-copy"><h1>认识石漠化</h1><div class="hero-sub">喀斯特山地的土地退化与生态修复</div></div><div class="scroll-cue"></div><div class="hero-fade"></div></header>
 <main class="content-shell">
   <div class="wrap intro reveal"><h2>从裸岩、土壤到植被，<em>认识石漠化的真实面貌。</em></h2><p>石漠化并不只是“山上石头变多了”。在岩溶地区，植被受损、土壤流失、基岩裸露和土地生产力下降往往同时发生。认识这些变化，也能更直观地理解为什么不同地区需要采取不同的保护与修复方式。</p></div>
   <div class="wrap fact-band reveal" id="factBand"><div class="fact-lead"><small>第四次石漠化调查</small><strong>我国石漠化状况持续改善</strong></div><div class="fact"><b class="count-num" data-value="722.32" data-decimals="2" data-suffix=" 万公顷">722.32 万公顷</b><span>截至 2021 年全国石漠化土地面积</span></div><div class="fact"><b class="count-num" data-value="-333.08" data-decimals="2" data-suffix=" 万公顷">−333.08 万公顷</b><span>较 2016 年净减少面积</span></div><div class="fact"><b class="count-num" data-value="65.4" data-decimals="1" data-suffix="%">65.4%</b><span>石漠化地区植被综合盖度</span></div></div>
@@ -88,5 +88,5 @@ const tabs=[...document.querySelectorAll('.tab')],panels=[...document.querySelec
 function activate(i){tabs.forEach((t,k)=>t.classList.toggle('active',k===i));panels.forEach((p,k)=>p.classList.toggle('active',k===i));requestAnimationFrame(()=>{panels[i].querySelectorAll('.reveal').forEach(x=>x.classList.add('on'));});}
 tabs.forEach((t,i)=>t.addEventListener('click',()=>activate(i)));
 </script>
-<script src="../navigation.js?v=20260823-9"></script></body>
+<script src="../navigation.js?v=20260823-10"></script></body>
 </html>

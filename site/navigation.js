@@ -19,15 +19,16 @@
   const activeLabel = nav?.querySelector(".nav-links a.active")?.textContent?.replace(/\s+/g, "").trim();
   const pageId = document.body.dataset.sitePage || pageByLabel[activeLabel] || (isAbout ? "about" : document.querySelector("#top") ? "home" : "");
 
+  const siteRoot = pageId === "home" ? "." : "..";
   const pageMeta = {
-    home: { label: "首页", href: "/site/index.html", summary: "返回网站首页，快速了解栏目与治理成果", icon: "<path d='M3.5 10.7 12 3.8l8.5 6.9'/><path d='M5.5 9.6v10.1h13V9.6M9.3 19.7v-6.2h5.4v6.2'/>" },
-    science: { label: "公益科普", href: "/site/science/index.html", summary: "认识石漠化的成因、分级、危害与修复方式", icon: "<path d='M12 6.3v13m0-13C10.8 5.5 9.2 5 7.5 5S4.2 5.5 3 6.3v13c1.2-.8 2.8-1.3 4.5-1.3s3.3.5 4.5 1.3m0-13C13.2 5.5 14.8 5 16.5 5S19.8 5.5 21 6.3v13c-1.2-.8-2.8-1.3-4.5-1.3s-3.3.5-4.5 1.3'/>" },
-    cases: { label: "典型案例", href: "/site/cases/index.html", summary: "走进川滇黔代表地区，看见治理实践与变化", icon: "<path d='M3 21v-4V5a2 2 0 0 1 2-2h6.5l1 1H21l-3 6 3 6h-8.5l-1-1H5a2 2 0 0 0-2 2Zm9-13.5V9'/>" },
-    dashboard: { label: "数据监测", href: "/site/dashboard/index.html", summary: "用公开调查数据观察石漠化面积与生态趋势", icon: "<path d='M5 20v-7h4v7H5Zm6 0V8h4v12h-4Zm6 0V4h4v16h-4Z'/><path d='M3 20h19'/>" },
-    value: { label: "价值实现", href: "/site/value/index.html", summary: "了解生态修复如何转化为可持续的发展价值", icon: "<path d='M12 21a9 9 0 1 0 0-18 9 9 0 0 0 0 18Z'/><path d='M12 7v10m3-8.3c-.7-1-1.7-1.5-3-1.5-1.7 0-3 .9-3 2s1.3 2 3 2 3 .9 3 2-1.3 2-3 2c-1.3 0-2.3-.5-3-1.5'/>" },
-    stories: { label: "生态故事", href: "/site/stories/index.html", summary: "阅读来自真实报道的治理人物、村庄与行动", icon: "<path d='M5 4h14a2 2 0 0 1 2 2v13H7a3 3 0 0 0-3 3V5a1 1 0 0 1 1-1Z'/><path d='M7 19h14M8 8h8m-8 4h6'/>" },
-    community: { label: "公众参与", href: "/site/community/index.html", summary: "写下你的生态寄语，让新的声音加入留言流动", icon: "<path d='M21 12a8 8 0 0 1-8 8H5l-3 2 1.2-4.4A8.5 8.5 0 1 1 21 12Z'/><path d='M8 12h.01M12 12h.01M16 12h.01'/>" },
-    about: { label: "关于本站", href: "/site/about/index.html", summary: "了解建站初衷、内容依据与使用声明", icon: "<circle cx='12' cy='12' r='9'/><path d='M12 11v6m0-10h.01'/>" },
+    home: { label: "首页", href: `${siteRoot}/index.html`, summary: "返回网站首页，快速了解栏目与治理成果", icon: "<path d='M3.5 10.7 12 3.8l8.5 6.9'/><path d='M5.5 9.6v10.1h13V9.6M9.3 19.7v-6.2h5.4v6.2'/>" },
+    science: { label: "公益科普", href: `${siteRoot}/science/index.html`, summary: "认识石漠化的成因、分级、危害与修复方式", icon: "<path d='M12 6.3v13m0-13C10.8 5.5 9.2 5 7.5 5S4.2 5.5 3 6.3v13c1.2-.8 2.8-1.3 4.5-1.3s3.3.5 4.5 1.3m0-13C13.2 5.5 14.8 5 16.5 5S19.8 5.5 21 6.3v13c-1.2-.8-2.8-1.3-4.5-1.3s-3.3.5-4.5 1.3'/>" },
+    cases: { label: "典型案例", href: `${siteRoot}/cases/index.html`, summary: "走进川滇黔代表地区，看见治理实践与变化", icon: "<path d='M3 21v-4V5a2 2 0 0 1 2-2h6.5l1 1H21l-3 6 3 6h-8.5l-1-1H5a2 2 0 0 0-2 2Zm9-13.5V9'/>" },
+    dashboard: { label: "数据监测", href: `${siteRoot}/dashboard/index.html`, summary: "用公开调查数据观察石漠化面积与生态趋势", icon: "<path d='M5 20v-7h4v7H5Zm6 0V8h4v12h-4Zm6 0V4h4v16h-4Z'/><path d='M3 20h19'/>" },
+    value: { label: "价值实现", href: `${siteRoot}/value/index.html`, summary: "了解生态修复如何转化为可持续的发展价值", icon: "<path d='M12 21a9 9 0 1 0 0-18 9 9 0 0 0 0 18Z'/><path d='M12 7v10m3-8.3c-.7-1-1.7-1.5-3-1.5-1.7 0-3 .9-3 2s1.3 2 3 2 3 .9 3 2-1.3 2-3 2c-1.3 0-2.3-.5-3-1.5'/>" },
+    stories: { label: "生态故事", href: `${siteRoot}/stories/index.html`, summary: "阅读来自真实报道的治理人物、村庄与行动", icon: "<path d='M5 4h14a2 2 0 0 1 2 2v13H7a3 3 0 0 0-3 3V5a1 1 0 0 1 1-1Z'/><path d='M7 19h14M8 8h8m-8 4h6'/>" },
+    community: { label: "公众参与", href: `${siteRoot}/community/index.html`, summary: "写下你的生态寄语，让新的声音加入留言流动", icon: "<path d='M21 12a8 8 0 0 1-8 8H5l-3 2 1.2-4.4A8.5 8.5 0 1 1 21 12Z'/><path d='M8 12h.01M12 12h.01M16 12h.01'/>" },
+    about: { label: "关于本站", href: `${siteRoot}/about/index.html`, summary: "了解建站初衷、内容依据与使用声明", icon: "<circle cx='12' cy='12' r='9'/><path d='M12 11v6m0-10h.01'/>" },
   };
   const pageOrder = ["home", "science", "cases", "dashboard", "value", "stories", "community", "about"];
   if (hasInnerHero) document.body.classList.add("site-inner-hero");
