@@ -151,17 +151,7 @@
     if (primaryHeroSrc) document.body.style.setProperty("--site-hero-image", `url("${primaryHeroSrc}")`);
     hero.querySelectorAll("img").forEach((img) => {
       img.style.visibility = "visible";
-      img.style.opacity = "0.999";
-      window.requestAnimationFrame(() => {
-        img.style.opacity = "1";
-      });
-      if (!img.complete || !img.naturalWidth) {
-        const src = img.getAttribute("src");
-        if (src) {
-          img.removeAttribute("src");
-          window.requestAnimationFrame(() => img.setAttribute("src", src));
-        }
-      }
+      img.style.opacity = "1";
     });
   };
   window.addEventListener("pageshow", restoreHero);
