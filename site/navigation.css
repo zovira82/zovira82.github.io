@@ -3,7 +3,7 @@
     body{font-family:var(--site-sans)!important}
     .nav{height:72px!important;font-family:var(--site-sans)!important;color:#fff;background:linear-gradient(180deg,rgba(9,35,28,.72),transparent);border-bottom:0!important;transition:background .3s,color .3s,box-shadow .3s!important}
     .nav .nav-inner{height:72px!important;display:flex!important;align-items:center!important;gap:30px!important}
-    .nav .brand{display:flex!important;align-items:center!important;gap:10px!important;font-family:var(--site-sans)!important;font-size:15px!important;font-weight:720!important;line-height:1.2!important;letter-spacing:.018em!important;white-space:nowrap!important}
+    .nav .brand{display:flex!important;align-items:center!important;gap:9px!important;font-family:var(--site-sans)!important;font-size:13px!important;font-weight:720!important;line-height:1.2!important;letter-spacing:.008em!important;white-space:nowrap!important}
     .nav .brand-mark,.nav .brand-icon{flex:0 0 auto;width:34px!important;height:34px!important;border-radius:50%!important;display:grid!important;place-items:center!important;color:#fff!important;background:var(--site-green)!important}
     .nav .brand-mark svg,.nav .brand-icon svg{width:19px!important;height:19px!important}
     .nav .nav-links{margin-left:auto!important;display:flex!important;align-items:center!important;gap:1px!important;font-family:var(--site-sans)!important}

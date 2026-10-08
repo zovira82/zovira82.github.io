@@ -1,9 +1,9 @@
 window.REGION_DATABASE = {
   meta: {
-    title: "川滇黔省际毗邻区生态经济人口数据库",
-    version: "预览版 0.8",
-    updated: "2026-09-05",
-    statement: "区域人口、经济、生态与产业数据来自各地统计公报及公开资料。"
+    title: "川滇黔省际毗邻地区生态富民数据库",
+    version: "本地预览版 1.0",
+    updated: "2026-10-08",
+    statement: "区域人口、经济、生态治理与产业数据来自各地统计公报及公开资料。"
   },
   regions: [
     {id:"gz-jinsha", province:"贵州", name:"金沙县", city:"毕节市", lng:106.22, lat:27.46},
